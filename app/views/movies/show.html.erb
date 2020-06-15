@@ -1,0 +1,19 @@
+<h1><%= @movie.title %>'s Page</h1>
+<img src = <%= @movie.img_url %> alt = "#{@movie.title}'s poster" width = "300" height = "450"><br>
+<em>Rating: <%= @movie.average_rating %>/10</em><br><br>
+
+<h2>Description:</h2>
+<p><%= @movie.description %></p>
+<em><%= @movie.runtime %> min</em><br><br>
+
+<h2>Reviews!<h2>
+<ul>
+  <% @movie.reviews.each do |r| %>
+    <li><%= link_to r.user.username, user_path(r.user) %> says: "<%= r.content %>" - <%= r.rating %>/10</li><br>
+  <% end %>
+</ul><br><br><br>
+
+
+<h2><%= link_to "Click Here to Return to Main Movies Page", movies_path %></h2><br>
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_153334) do
+ActiveRecord::Schema.define(version: 2020_06_15_165253) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_153334) do
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_153334) do
     t.integer "runtime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -44,6 +46,8 @@ ActiveRecord::Schema.define(version: 2020_06_15_153334) do
     t.integer "movie_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url"
+    t.string "personality_trait"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_153334) do
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url"
   end
 
 end
