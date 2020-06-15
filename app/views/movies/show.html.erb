@@ -14,6 +14,16 @@
 </ul><br><br><br>
 
 
+<% @movie.roles.each do |role| %>
+
+  <h3><%= link_to role.name, actor_path(actor) %></h3>
+  <img src= <%= actor.img_url %> alt= "<%= actor.name %> mactor poster" width = "200" height = "300" ><br>
+
+
+
+
+
+
 <h2><%= link_to "Click Here to Return to Main Movies Page", movies_path %></h2><br>
 
 

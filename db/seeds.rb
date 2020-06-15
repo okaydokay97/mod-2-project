@@ -12,9 +12,9 @@ u1 = User.create(username: "Rubens", age: 22)
 u2 = User.create(username: "Yann", age: 27)
 
 ### ROLES ###
-r1 = Role.create(name: "Cady Heron", actor_id: 1, movie_id: 1)
-r2 = Role.create(name: "Regina George", actor_id: 2, movie_id: 1)
-r3 = Role.create(name: "Anna Coleman", actor_id: 1, movie_id: 2)
+role1 = Role.create(name: "Cady Heron", actor_id: 1, movie_id: 1, personality_trait: "naive")
+role2 = Role.create(name: "Regina George", actor_id: 2, movie_id: 1, personality_trait: "manipulative")
+role3 = Role.create(name: "Anna Coleman", actor_id: 1, movie_id: 2, personality_trait: "punk" )
 
 ### REVIEWS ###
 r1 = Review.create(content: "I liked this movie!", rating: 6, movie_id: 2, user_id: 1)
@@ -31,6 +31,6 @@ a1.update(img_url: "https://akns-images.eonline.com/eol_images/Entire_Site/20191
 a2.update(img_url: "https://cdn.britannica.com/83/147883-050-3EB5D697/Rachel-McAdams-2011.jpg")
 
 #add role pic
-r1.update(img_url:"https://i.pinimg.com/originals/51/7e/99/517e99a912d6bc56383c6486c547c6d7.jpg")
-r2.update(img_url:"https://vignette.wikia.nocookie.net/meangirls/images/f/f0/Regina-George-Mean-Girls-GIFs.jpg/revision/latest?cb=20190127212952")
-r3.update(img_url:"https://vignette.wikia.nocookie.net/disney/images/6/67/Anna_Coleman_Guitar.jpg/revision/latest?cb=20120527221305")
+role1.update(img_url:"https://i.pinimg.com/originals/0c/26/11/0c26119904f2b59d30fb317b57d80853.jpg")
+role2.update(img_url:"https://vignette.wikia.nocookie.net/meangirls/images/f/f0/Regina-George-Mean-Girls-GIFs.jpg/revision/latest?cb=20190127212952")
+role3.update(img_url:"https://vignette.wikia.nocookie.net/disney/images/6/67/Anna_Coleman_Guitar.jpg/revision/latest?cb=20120527221305")
