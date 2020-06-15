@@ -7,11 +7,14 @@
 <h2>Filmography<h2>
 <ul>
 
-<% @actor.movies.each do |am| %>
- <li><%= link_to am.title, movie_path(am) %> </li><br>
-<% end %>
-
-
+<p style="color:red"> WORK ON LOOP, show acted movies</p>
+<%
+=begin%>
+      <% @actor.movies each do |am| %>
+    <li><%= link_to am.title, movie_path(am) %> </li><br>
+  <% end %>
+<%
+=end%>
 
 </ul><br><br><br>
 
