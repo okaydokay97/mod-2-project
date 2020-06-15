@@ -1,0 +1,10 @@
+<h1>Here Are All Our Movies!</h1>
+<% @movies.each do |m| %>
+
+  <h3><%= link_to m.title, movie_path(m) %></h3>
+  <img src= <%= m.img_url %> alt= "<%= m.title %> movie poster" width = "200" height = "300" ><br>
+  <em>Rating: <%= m.average_rating %>/10</em><br><br>
+
+
+  
+<% end %>

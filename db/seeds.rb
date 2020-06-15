@@ -1,14 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
-
 
 ### ACTORS ###
 a1 = Actor.create(name: "Lindsay Lohan", bio: "She is crazy", age: 24)
@@ -31,3 +20,7 @@ r1 = Role.create(name: "Anna Coleman", actor_id: 1, movie_id: 2)
 r1 = Review.create(content: "I liked this movie!", rating: 6, movie_id: 2, user_id: 1)
 r2 = Review.create(content: "I hated this movie!", rating: 1, movie_id: 2, user_id: 2)
 r3 = Review.create(content: "This movie is hilarious!", rating: 10, movie_id: 1, user_id: 1)
+
+### ADDING PICS ###
+m1.update(img_url: "https://www.gstatic.com/tv/thumb/v22vodart/34319/p34319_v_v8_ak.jpg")
+m2.update(img_url: "https://www.gstatic.com/tv/thumb/v22vodart/32185/p32185_v_v8_aa.jpg")
