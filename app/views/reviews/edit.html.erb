@@ -1,0 +1,8 @@
+<h1>Please Enter Your Update Review/Rating</h1>
+<%= form_for @review do |r| %>
+  <%= r.label :content %>
+  <%= r.text_field :content %><br>
+  <%= r.label :rating %>
+  <%= r.text_field :rating %><br>
+  <%= r.submit %>
+<% end %>

@@ -7,11 +7,13 @@
 <em><%= @movie.runtime %> min</em><br><br>
 
 <h2>Reviews!<h2>
-<ul>
   <% @movie.reviews.each do |r| %>
-    <li><%= link_to r.user.username, user_path(r.user) %> says: "<%= r.content %>" - <%= r.rating %>/10</li><br>
+    <p><img src= <%= r.user.img_url %> alt = "#{r.user.username}'s profile picture" width = "50" height = "50"> 
+    <%= link_to r.user.username, user_path(r.user) %> says: "<%= r.content %>" - <%= r.rating %>/10</p><br>
   <% end %>
-</ul><br><br><br>
+
+  
+<br><br><br>
 
 
 <h2><%= link_to "Click Here to Return to Main Movies Page", movies_path %></h2><br>
