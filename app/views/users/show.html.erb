@@ -1,0 +1,5 @@
+<h1><%= @user.username %>'s Page</h1>
+<img src= <%= @user.img_url %> alt= "#{@user.username}'s profile picture" height = "150" width = "150"><br>
+<em>Age: <%= @user.age %></em><div><br><br>
+<p>Total Number of Reviews: <%= @user.review_count %></p><br>
+<h2><%= link_to "Click Here to Return to Movies", movies_path %><h2>
