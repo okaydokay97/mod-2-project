@@ -6,14 +6,20 @@
 <p><%= @movie.description %></p>
 <em><%= @movie.runtime %> min</em><br><br>
 
+<h2>Cast</h2>
+<% @movie.roles.each do |role| %>
+<p><%= link_to "#{role.actor.name}", actor_path(role.actor) %> - <%= link_to "#{role.name}", role_path(role) %></p>
+<% end %>
+
 <h2>Reviews!<h2>
   <% @movie.reviews.each do |r| %>
     <p><img src= <%= r.user.img_url %> alt = "#{r.user.username}'s profile picture" width = "50" height = "50"> 
     <%= link_to r.user.username, user_path(r.user) %> says: "<%= r.content %>" - <%= r.rating %>/10</p><br>
   <% end %>
 
+
   
-<br><br><br>
+<br><br>
 
 
 <h2><%= link_to "Click Here to Return to Main Movies Page", movies_path %></h2><br>
