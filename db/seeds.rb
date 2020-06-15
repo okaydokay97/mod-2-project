@@ -22,5 +22,12 @@ r2 = Review.create(content: "I hated this movie!", rating: 1, movie_id: 2, user_
 r3 = Review.create(content: "This movie is hilarious!", rating: 10, movie_id: 1, user_id: 1)
 
 ### ADDING PICS ###
+#add movie pic
 m1.update(img_url: "https://www.gstatic.com/tv/thumb/v22vodart/34319/p34319_v_v8_ak.jpg")
 m2.update(img_url: "https://www.gstatic.com/tv/thumb/v22vodart/32185/p32185_v_v8_aa.jpg")
+
+#add actor pic
+a1.update(img_url: "https://akns-images.eonline.com/eol_images/Entire_Site/2019114/rs_634x1024-191204125833-634.lindsay-lohan-2004.ct.120419.jpg?fit=around|1268:auto&output-quality=90&crop=1268:auto;center,top")
+a2.update(img_url: "https://cdn.britannica.com/83/147883-050-3EB5D697/Rachel-McAdams-2011.jpg")
+
+#add

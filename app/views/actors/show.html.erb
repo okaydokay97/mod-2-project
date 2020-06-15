@@ -1,0 +1,23 @@
+<h1>Detail Info about <%= @actor.name %></h1>
+<img src = <%= @actor.img_url %> alt = "#{@actor.name}'s poster" width = "300" height = "450"><br>
+<h2>Info:</h2>
+<p>Bio: <%= @actor.bio %></p><br>
+<p>Age: <%= @actor.age %></p><br>
+
+<h2>Filmography<h2>
+<ul>
+
+<p style="color:red"> WORK ON LOOP, show acted movies</p>
+<%
+=begin%>
+      <% @actor.movies each do |am| %>
+    <li><%= link_to am.title, movie_path(am) %> </li><br>
+  <% end %>
+<%
+=end%>
+
+</ul><br><br><br>
+
+<%= button_to "Return", actors_path, :method => "get" %><br>
+
+
