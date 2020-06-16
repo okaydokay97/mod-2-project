@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include SessionsHelper
   # before_action :authorized
   # skip_before_action :authorized, only: [:new, :create]
 
