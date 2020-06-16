@@ -1,0 +1,11 @@
+    <h1>Log In Page</h1>
+      <%= form_tag sessions_path do %> 
+      <%= label_tag "User Name" %>
+      <%= text_field_tag :username %>
+      <br><br>
+      <%= label_tag "Password" %>
+      <%= password_field_tag :password %><br>
+      <br>
+      <%= submit_tag "Log in" %> <br><br>
+    <% end %>
+    <%= button_to "Create a New Account", new_user_path, :method => "get" %>
