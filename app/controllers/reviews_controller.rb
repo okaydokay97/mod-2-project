@@ -2,11 +2,20 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    # if session[:user_id]
+    #   @current = User.find(session[:user_id])
+    end 
   end
 
   def create
-    review = Review.create(create_review_params)
-    redirect_to review_path(review)
+    @review = Review.new(review_params)
+    # @order.user_id = session[:user_id]
+    # if @review.save
+    #   Review.find(@review.user_id)
+    #   redirect_to @review
+    # else
+    #   render :new
+    # end
   end
 
   def show 
