@@ -1,4 +1,4 @@
-<h1>Detail Info about <%= @role.name %></h1>
+<h1><%= @role.name %></h1>
 <img src = <%= @role.img_url %> alt = "#{@role.name}'s poster" width = "300" height = "450"><br>
 
 <h2>Info:</h2>
@@ -9,6 +9,6 @@
 
 </ul><br><br><br>
 
-<%= button_to "Return", movie_path, :method => "get" %><br>
-
+<%= button_to "Return To #{@role.movie.title}", movie_path(@role.movie), :method => "get" %><br>
+<%= button_to "Return To Home Page", movies_path, :method => "get" %><br>
 

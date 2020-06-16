@@ -1,8 +1,9 @@
 <h1>Actors</h1>
 <% @actors.each do |actor| %>
 
-  <h3><%= link_to actor.name, actor_path(actor) %></h3>
-  <img src= <%= actor.img_url %> alt= "<%= actor.name %> mactor poster" width = "200" height = "300" ><br>
-
+  <h4><%= link_to actor.name, actor_path(actor) %></h3>
+  <a href= "<%= actor_path(actor) %>"><img src= <%= actor.img_url %> alt= "<%= actor.name %> mactor poster" width = "100" height = "150" ></a><br>
 
 <% end %>
+<br><br>
+<h2><%= link_to "Click Here To Return To All Movies", movies_path %></h2>
