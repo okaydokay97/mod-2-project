@@ -15,11 +15,13 @@ u1 = User.create(username: "Rubens", age: 22)
 u2 = User.create(username: "Yann", age: 27)
 
 ### ROLES ###
+
 role1 = Role.create(name: "Cady Heron", actor_id: 1, movie_id: 1)
 role2 = Role.create(name: "Regina George", actor_id: 2, movie_id: 1)
 role3 = Role.create(name: "Anna Coleman", actor_id: 1, movie_id: 2)
 role4 = Role.create(name: "Laurie Strode", actor_id: 3, movie_id: 3)
 role5 = Role.create(name: "Tess Coleman", actor_id: 3, movie_id: 2)
+
 
 ### REVIEWS ###
 r1 = Review.create(content: "I liked this movie!", rating: 6, movie_id: 2, user_id: 1)
@@ -40,6 +42,7 @@ a2.update(img_url: "https://cdn.britannica.com/83/147883-050-3EB5D697/Rachel-McA
 a3.update(img_url: "https://www.gstatic.com/tv/thumb/persons/29426/29426_v9_ba.jpg")
 
 #add role pic
+
 role1.update(img_url:"https://i.pinimg.com/originals/51/7e/99/517e99a912d6bc56383c6486c547c6d7.jpg")
 role2.update(img_url:"https://vignette.wikia.nocookie.net/meangirls/images/f/f0/Regina-George-Mean-Girls-GIFs.jpg/revision/latest?cb=20190127212952")
 role3.update(img_url:"https://vignette.wikia.nocookie.net/disney/images/6/67/Anna_Coleman_Guitar.jpg/revision/latest?cb=20120527221305")
@@ -49,3 +52,4 @@ role5.update(img_url: "https://vignette.wikia.nocookie.net/freaky-friday/images/
 #add user pic
 u1.update(img_url: "https://pbs.twimg.com/profile_images/1162445050590183424/WL2lQ7OR_400x400.jpg")
 u2.update(img_url: "https://images.macrumors.com/t/LvR0raMQUdHK6KxeJLpFA9Ar18Y=/1600x0/filters:quality(90)/article-new/2017/11/crying-tears-of-joy-emoji-250x248.jpg")
+
