@@ -15,11 +15,11 @@ class SessionsController < ApplicationController
   end
 
 
-  # def destroy
-  #   session.delete(:user_id)
-  #   # session[:user_id] = nil
-  #   flash[:notice] = 'Logout Successful'
-  #   redirect_to login_path
-  # end
+  def destroy
+    session.delete(:user_id)
+    # session[:user_id] = nil
+    flash[:notice] = 'Logout Successful'
+    redirect_to login_path
+  end
 
 end

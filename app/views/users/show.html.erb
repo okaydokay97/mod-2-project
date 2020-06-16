@@ -8,4 +8,8 @@
 <% end %>
 <br>
 <h2><%= link_to "Click Here to Edit Your Account", edit_user_path(@user) %><h2>
-<h2><%= link_to "Click Here to Return to Movies", movies_path %><h2>
+<h2><%= link_to "Click Here to Movies Page", movies_path %><h2>
+
+<%= form_tag sessions_path do %> 
+<%= submit_tag "Log out" %> <br><br>
+<% end %>
