@@ -1,0 +1,8 @@
+<h1>Edit Your Account</h1>
+<%= form_for @user do |u| %>
+  <%= u.label :age %>
+  <%= u.text_field :age %><br>
+  <%= u.label :img_url %>
+  <%= u.text_field :img_url %><br>
+  <%= u.submit %>
+<% end %>

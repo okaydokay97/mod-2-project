@@ -1,0 +1,8 @@
+<h1>Here Is Your Review For <%= @review.movie.title %></h1><br>
+<h3><%= "#{@review.content} - #{@review.rating}/10" %><h3>
+<br>
+ #delete button
+<br>
+<h2><%= link_to "Click Here To Update Your Review/Rating", edit_review_path(@review) %><h2>
+<h2><%= link_to "Click Here To Return To Your Profile", user_path(@review.user) %><h2>
+<h2><%= link_to "Click Here To Return To All Movies", movies_path %><h2>
