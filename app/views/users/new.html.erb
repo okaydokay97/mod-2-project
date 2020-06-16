@@ -1,26 +1,30 @@
 <%= form_for (@user) do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
+  <br><br> 
   <%= f.label :age %>
   <%= f.text_field :age %>
-  <%= f.label :img_url %>
+  <br><br>
+  <%= f.label :img_url,"Profile Picture URL " %>  
   <%= f.text_field :img_url %>
+  <br><br>
   <%= f.label :password %>
   <%= f.password_field :password %>
+  <br><br>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
-           
+  <br><br>
   <%= f.submit "Sign Up" %>
 
 
-  
+
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h3><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h3>
  
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <li><p style="color:red"><%= msg %></p></li>
     <% end %>
     </ul>
   </div>

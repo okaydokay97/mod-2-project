@@ -6,3 +6,11 @@
   <%= r.text_field :rating %><br>
   <%= r.submit %>
 <% end %>
+
+<% if @current_user %>
+<h4> logged in as <%= @current_user.username %> </h4>
+<% end %>
+
+<%= form_tag sessions_path do %> 
+<%= submit_tag "Log out" %> <br><br>
+<% end %>
