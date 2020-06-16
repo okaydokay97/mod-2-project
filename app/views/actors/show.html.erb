@@ -1,19 +1,17 @@
 <h1><%= @actor.name %>'s Info Page</h1>
-<img src = <%= @actor.img_url %> alt = "#{@actor.name}'s poster" width = "300" height = "450"><br>
+<img src = <%= @actor.img_url %> alt = "#{@actor.name}'s poster" width = "260" height = "390"><br>
 <h2>Info</h2>
 <p>Biography: <%= @actor.bio %></p>
 <p>Age: <%= @actor.age %></p><br>
 
 <h2>Filmography<h2>
-<ul>
 
 <% @actor.movies.each do |am| %>
- <li><%= link_to am.title, movie_path(am) %> </li><br>
+  <p><%= link_to am.title, movie_path(am) %></p>
+  <p><a href= "<%= movie_path(am) %> "><img src= <%= am.img_url %> alt= "<%= am.title %> movie poster" width = "80" height = "120" ></a></p><br>
 <% end %>
 
-
-
-</ul><br><br><br>
+<br><br><br>
 
 <%= button_to "Click Here to Return to Main Actors Page", actors_path, :method => "get" %><br>
 
