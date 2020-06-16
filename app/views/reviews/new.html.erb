@@ -1,15 +1,16 @@
-
 <h1> Create a New Review  </h1>
-<%=form_for @review do |r|%>
-  <p> A drop down box for showing movie title? to write a review?
-  
-  <br>
-
 
 <%= form_for @review do |r| %>
-  <%= r.label :content %>
-  <%= r.text_field :content %><br>
-  <%= r.label :rating %>
-  <%= r.text_field :rating %><br>
-  <%= r.submit %>
+  <%= r.label :content, "Enter Your Review" %><br>
+  <%= r.text_area :content %><br><br>
+    
+  <%= r.label :rating %><br>
+  <%= r.text_field :rating %><br><br>
+    
+  <%= r.label :movie %>
+  <%= r.collection_select :movie_id, Movie.all, :id, :title %><br><br><br> 
+    
+  <%= r.submit %><br><br>
 <% end %>
+    
+<%= button_to "Return To All Movies", movies_path, method: "get" %>
