@@ -12,7 +12,9 @@
   <p><%= link_to "#{r.movie.title} - \"#{r.content}\" - #{r.rating}/10", review_path(r) %></p>
 <% end %>
 <br>
-<h2><%= link_to "Click Here to Edit Your Account", edit_user_path(@user) %><h2>
+<% if session[:user_id] == @user.id %>
+  <h2><%= link_to "Click Here to Edit Your Account", edit_user_path(@user) %><h2>
+<% end %>
 <h2><%= link_to "Click Here to Movies Page", movies_path %><h2>
 
 

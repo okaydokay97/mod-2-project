@@ -1,9 +1,5 @@
 class ReviewsController < ApplicationController
-<<<<<<< HEAD
   before_action :logged_in?
-=======
->>>>>>> master
-
   def new
     @review = Review.new
     # if session[:user_id]
