@@ -1,8 +1,8 @@
-# User.destroy_all
-# Review.destroy_all
-# Movie.destroy_all
-# Actor.destroy_all
-# Role.destroy_all
+User.destroy_all
+Review.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 ### ACTORS ###
 a1 = Actor.create(name: "Lindsay Lohan", bio: "She is crazy", age: 24)
 a2 = Actor.create(name: "Rachel McAdams", bio: "Really good actress", age: 32)
@@ -15,24 +15,23 @@ m3 = Movie.create(title: "Halloween", genre: "Horror", description: "Fifteen yea
 ", runtime: 91)
 
 ### USERS ###
-u1 = User.create(username: "Rubens", age: 22)
-u2 = User.create(username: "Yann", age: 27)
+u1 = User.create(username: "Rubens", password: "laptop", age: 22)
+u2 = User.create(username: "Yann", password: "123", age: 27)
 
 ### ROLES ###
-
-role1 = Role.create(name: "Cady Heron", actor_id: 1, movie_id: 1)
-role2 = Role.create(name: "Regina George", actor_id: 2, movie_id: 1)
-role3 = Role.create(name: "Anna Coleman", actor_id: 1, movie_id: 2)
-role4 = Role.create(name: "Laurie Strode", actor_id: 3, movie_id: 3)
-role5 = Role.create(name: "Tess Coleman", actor_id: 3, movie_id: 2)
+role1 = Role.create(name: "Cady Heron", actor_id: a1.id, movie_id: m1.id)
+role2 = Role.create(name: "Regina George", actor_id: a2.id, movie_id: m1.id)
+role3 = Role.create(name: "Anna Coleman", actor_id: a1.id, movie_id: m2.id)
+role4 = Role.create(name: "Laurie Strode", actor_id: a3.id, movie_id: m3.id)
+role5 = Role.create(name: "Tess Coleman", actor_id: a3.id, movie_id: m2.id)
 
 
 ### REVIEWS ###
-r1 = Review.create(content: "I liked this movie!", rating: 6, movie_id: 2, user_id: 1)
-r2 = Review.create(content: "I hated this movie!", rating: 1, movie_id: 2, user_id: 2)
-r3 = Review.create(content: "This movie is hilarious!", rating: 10, movie_id: 1, user_id: 1)
-r4 = Review.create(content: "I was so Scared!", rating: 10, movie_id: 3, user_id: 1)
-r5 = Review.create(content: "Scariest movie of all time", rating: 9, movie_id: 3, user_id: 2)
+r1 = Review.create(content: "I liked this movie!", rating: 6, movie_id: m2.id, user_id: u1.id)
+r2 = Review.create(content: "I hated this movie!", rating: 1, movie_id: m2.id, user_id: u2.id)
+r3 = Review.create(content: "This movie is hilarious!", rating: 10, movie_id: m1.id, user_id: u1.id)
+r4 = Review.create(content: "I was so Scared!", rating: 10, movie_id: m3.id, user_id: u1.id)
+r5 = Review.create(content: "Scariest movie of all time", rating: 9, movie_id: m3.id, user_id: u2.id)
 
 ### ADDING PICS ###
 #add movie pic
@@ -56,4 +55,3 @@ role5.update(img_url: "https://vignette.wikia.nocookie.net/freaky-friday/images/
 #add user pic
 u1.update(img_url: "https://pbs.twimg.com/profile_images/1162445050590183424/WL2lQ7OR_400x400.jpg")
 u2.update(img_url: "https://images.macrumors.com/t/LvR0raMQUdHK6KxeJLpFA9Ar18Y=/1600x0/filters:quality(90)/article-new/2017/11/crying-tears-of-joy-emoji-250x248.jpg")
-
