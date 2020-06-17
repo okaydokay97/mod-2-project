@@ -1,0 +1,16 @@
+<h1> Create a New Review  </h1>
+
+<%= form_for @review do |r| %>
+  <%= r.label :content, "Enter Your Review" %><br>
+  <%= r.text_area :content %><br><br>
+    
+  <%= r.label :rating %><br>
+  <%= r.text_field :rating %><br><br>
+    
+  <%= r.label :movie %>
+  <%= r.collection_select :movie_id, Movie.all, :id, :title %><br><br><br> 
+    
+  <%= r.submit %><br><br>
+<% end %>
+    
+<%= button_to "Return To All Movies", movies_path, method: "get" %>
