@@ -18,10 +18,9 @@
     <%= link_to r.user.username, user_path(r.user) %> says: "<%= r.content %>" - <%= r.rating %>/10</p><br>
   <% end %>
 
-
+<%= button_to "Create A Review", new_review_path, method: "get" %>
   
 <br><br>
-
 
 <h2><%= link_to "Click Here to Return to Main Movies Page", movies_path %></h2><br>
 
