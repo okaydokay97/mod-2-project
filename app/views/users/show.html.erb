@@ -1,5 +1,6 @@
 <ul>
-  <li><a href="<% user_path(params[:id]) %>">My Account</a></li>
+
+  <li><a href="<% user_path(@current_user) %>">My Account</a></li>
   <li><a href="/movies">Movies</a></li>
 <ul>
 

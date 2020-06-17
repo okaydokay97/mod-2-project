@@ -1,11 +1,15 @@
-<h1>Here Is Your Review For <%= @review.movie.title %></h1><br>
+<h1>Here Is The Review For <%= @review.movie.title %></h1><br>
 <h3><%= "#{@review.content} - #{@review.rating}/10" %><h3>
 <br>
 
 <br>
-<%= button_to "Edit Review/Rating", edit_review_path(@review), :method => "get" %>
-<%= button_to "Delete Review", review_path(@review), :method => "delete" %><br>
-<h3><%= link_to "Click Here To Return To Your Profile", user_path(@review.user) %><h3>
+
+<% if session[:user_id] == @review.user.id %>
+  <%= button_to "Edit Review/Rating", edit_review_path(@review), :method => "get" %>
+  <%= button_to "Delete Review", review_path(@review), :method => "delete" %><br>
+<% end %>
+
+<h3><%= link_to "Click Here To Return To Profile", user_path(@review.user) %><h3>
 <br><br>
 <h2><%= link_to "Click Here To Return To All Movies", movies_path %><h2>
 
