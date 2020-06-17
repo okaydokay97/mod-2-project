@@ -1,8 +1,8 @@
-User.destroy_all
-Review.destroy_all
-Movie.destroy_all
-Actor.destroy_all
-Role.destroy_all
+# User.destroy_all
+# Review.destroy_all
+# Movie.destroy_all
+# Actor.destroy_all
+# Role.destroy_all
 ### ACTORS ###
 a1 = Actor.create(name: "Lindsay Lohan", bio: "She is crazy", age: 24)
 a2 = Actor.create(name: "Rachel McAdams", bio: "Really good actress", age: 32)

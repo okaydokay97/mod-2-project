@@ -4,11 +4,11 @@ class ReviewsController < ApplicationController
     @review = Review.new
     # if session[:user_id]
     #   @current = User.find(session[:user_id])
-    end 
+    # end 
   end
 
   def create
-    @review = Review.new(review_params)
+    @review = Review.new(create_review_params)
     # @order.user_id = session[:user_id]
     # if @review.save
     #   Review.find(@review.user_id)
@@ -46,7 +46,7 @@ class ReviewsController < ApplicationController
   end
 
   def create_review_params
-    params.require(:review).permit(:content, :rating, :movie_id, :user_id)
+    params.require(:review).permit(:content, :rating, :movie_id,)
   end
 
 end
