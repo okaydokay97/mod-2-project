@@ -10,9 +10,11 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(create_review_params)
     @review.user_id = session[:user_id]
-    if @review.save
+    if @review.valid?
+      @review.save
       redirect_to review_path(@review)
     else
+      flash[:errors] = @review.errors.full_messages
       render :new
     end
   end

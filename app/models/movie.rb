@@ -18,15 +18,11 @@ class Movie < ApplicationRecord
   end
 
   def self.sort_alphabetically
-    movie_titles = self.all.map{|m| m.title}.sort
+    movie_titles = self.all.sort_by{|m| m.title}
   end
 
   def self.sort_by_rating
     self.all.sort_by{|movie| -movie.average_rating}
-  end
-
-  def self.sort_by_popularity
-    Movie.all.sort_by{|movie| -movie.reviews.count}
   end
 
 
