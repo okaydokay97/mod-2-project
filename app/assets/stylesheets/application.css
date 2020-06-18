@@ -1,15 +1,99 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+a:visited {
+  color: yellow;
+}
+
+a:hover { /*move on the link*/
+  color: blue;
+}
+
+a:focus {/*click on the link*/
+  color: red;
+}
+
+/* BODY STYLES */
+body {
+  background-image: linear-gradient(to right top, #6d6bd1, #6e77d7, #7083dc, #758fe0, #7b9ae3, #73a7ec, #6db3f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);  
+  align-items: center;
+}
+
+/* SIGNUP-ERRORS STYLES */
+.signup-errors {
+  flex: .65;
+  color: red;
+}
+
+/* FORM STYLES */
+.signup-form {
+  flex: 2;
+}
+
+.signup-content {
+  background-color: white;
+  display: inline;
+  padding: 2.5rem;
+  width: 70%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+}
+
+.signup-content h1 {
+  padding-bottom: 20px;
+  color: rgb(19, 18, 18);
+}
+
+.new_user input {
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-color: #677279;
+  outline: none;
+  font-size: .85rem;
+  /*border-color: #fdc221; */
+}
+
+.new_user input:focus {
+  transition: .2s ease-in;
+  border-color: #fdc221;
+}
+
+
+/* SIGNUP-FIELDS STYLES */
+.signup-fields {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+/* FORM BUTTON */
+input[type="submit"] {
+  font-family: poppins-regular;
+  font-size: 1rem;
+  border-width: 0;
+  display: block;
+  padding: 7px 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #99D16B;
+  color: black;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #30407f;
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+
+input[type="submit"]:active {
+  color: #fdc221;
+  transition: .1s ease-in;
+}
+
+form[class="new_user"] label {
+  color: #677279;
+  font-size: 1.3rem;
+}
+/*===============================*/

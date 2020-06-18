@@ -16,9 +16,17 @@ class UsersController < ApplicationController
     end
   end
 
+  # def show
+  #   @user = User.find(params[:id])
+  # end
   def show
-    @user = User.find(params[:id])
+    @user = User.find(@current_user.id)
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+      p session[:user_id]
+    end
   end
+
 
   def edit
     @user = User.find(params[:id])
