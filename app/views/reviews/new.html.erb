@@ -1,16 +1,26 @@
 <h1> Create a New Review  </h1>
 
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p style="color: red"><%= error %></p>
+  <% end %>
+<% end %>
+
 <%= form_for @review do |r| %>
   <%= r.label :content, "Enter Your Review" %><br>
   <%= r.text_area :content %><br><br>
     
-  <%= r.label :rating %><br>
-  <%= r.text_field :rating %><br><br>
+  <%= r.label :rating, "Enter Rating From 0 - 10" %><br>
+  <%= r.number_field :rating %><br><br>
     
   <%= r.label :movie %>
   <%= r.collection_select :movie_id, Movie.all, :id, :title %><br><br><br> 
     
   <%= r.submit %><br><br>
+<% end %>
+
+<% if @current_user %>
+<h4> logged in as <%= @current_user.username %> </h4>
 <% end %>
     
 <%= button_to "Return To All Movies", movies_path, method: "get" %>

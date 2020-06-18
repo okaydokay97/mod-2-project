@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/movies/sort_rating', to: 'movies#sort_rating'
   resources :reviews
   resources :reviews, only: [:new, :create, :show, :edit, :update]
   resources :movies, only: [:show, :index]
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create,:edit,:update] do
     resources :reviews, only: [:destroy] # delete
   end
-
+  
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"
   post "sessions", to: "sessions#create", as: "sessions"

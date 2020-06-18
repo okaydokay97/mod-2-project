@@ -1,5 +1,12 @@
 <h1>Welcome To SmellyPotatoes!</h1>
 <h2>Here Are All Our Movies</h2>
+<div align= "right">
+<% if flash[:sorted] %>
+<%= button_to "Sort By Title", movies_path, method: "get" %>
+<% else %>
+<%= button_to "Sort By Rating", movies_sort_rating_path, method: "get" %>
+<% end %>
+</div>
 <% @movies.each do |m| %>
 
   <h3><%= link_to m.title, movie_path(m) %></h3>

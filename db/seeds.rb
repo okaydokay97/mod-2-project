@@ -52,6 +52,13 @@ r2 = Review.create(content: "I hated this movie!", rating: 1, movie_id: m2.id, u
 r3 = Review.create(content: "This movie is hilarious!", rating: 10, movie_id: m1.id, user_id: u1.id)
 r4 = Review.create(content: "I was so Scared!", rating: 10, movie_id: m3.id, user_id: u1.id)
 r5 = Review.create(content: "Scariest movie of all time", rating: 9, movie_id: m3.id, user_id: u2.id)
+r6 = Review.create(content: "I liked this movie!", rating: 2, movie_id: m4.id, user_id: u1.id)
+r7 = Review.create(content: "Wow SO GOOD", rating: 7, movie_id: m5.id, user_id: u2.id)
+r8 = Review.create(content: "Too much water", rating: 3, movie_id: m6.id, user_id: u1.id)
+r9 = Review.create(content: "Could be better", rating: 5, movie_id: m7.id, user_id: u2.id)
+r10 = Review.create(content: "Nice Colors", rating: 8, movie_id: m8.id, user_id: u1.id)
+
+
 
 ### ADDING PICS ###
 #add movie pic
