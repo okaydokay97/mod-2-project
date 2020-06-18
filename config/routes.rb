@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  #resources :reviews
+  resources :reviews
   resources :reviews, only: [:new, :create, :show, :edit, :update]
   resources :movies, only: [:show, :index]
   resources :roles, only: [:show]
   resources :actors, only: [:show, :index]
+
   resources :users, only: [:show, :new, :create,:edit,:update] do
     resources :reviews, only: [:destroy] # delete
   end
